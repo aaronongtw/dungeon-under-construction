@@ -467,19 +467,20 @@ var startGame = function() {
 }
 
 var movementIdentity = function(e) {
-  if (e.which === 119) {
+  if (e.which === 119 || e.which === 38) {
     dungeon.playerMoveUp();
   }
-  if (e.which === 115) {
+  if (e.which === 115 || e.which === 40) {
     dungeon.playerMoveDown();
   }
-  if (e.which === 97) {
+  if (e.which === 97 || e.which === 37) {
     dungeon.playerMoveLeft();
   }
-  if (e.which === 100) {
+  if (e.which === 100 || e.which === 39) {
     dungeon.playerMoveRight();
   }
 }
+
 
 var dead = function() {
   $('#startGame').fadeIn();
