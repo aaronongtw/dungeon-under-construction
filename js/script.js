@@ -657,7 +657,7 @@ var touchMove = function(e) {
     var touch = e.touches[0];
     if (touch.pageX < 350) {
       dungeon.playerMoveLeft();
-    } else if (touch.pageX < 650) {
+    } else if (touch.pageX > 650) {
       dungeon.playerMoveRight();
     } else {
       if (playerLoc === floor2downStairs || playerLoc === floor3downStairs) {
