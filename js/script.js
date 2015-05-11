@@ -657,14 +657,17 @@ var touchMove = function(e) {
     var touch = e.touches[0];
     if (touch.pageX < 350) {
       dungeon.playerMoveLeft();
+      alert("moving left")
     } else if (touch.pageX > 650) {
       dungeon.playerMoveRight();
+      alert("moving right")
     } else {
       if (playerLoc === floor2downStairs || playerLoc === floor3downStairs) {
         dungeon.playerMoveDown();
       } else if (playerLoc === floor1Stairs || playerLoc === floor2upStairs) {
         dungeon.playerMoveUp();
       }
+      alert("ladder activation")
     }
     }
 
