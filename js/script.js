@@ -650,20 +650,21 @@ $("#help").hover(help)
 
 })
 
+// document.addEventListener('touchmove', function(e) {
+//     e.preventDefault();
+//     var touch = e.touches[0];
+//     alert(touch.pageX + " - " + touch.pageY);
+// }, false);
 
-window.addEventListener('load', function(){
-    var el = document.getElementById('touchsurface2')
-    var inner = document.getElementById('inner')
-    var hidetimer = null
-    swipedetect(el, function(swipedir){
-        if (swipedir != 'none'){
-            clearTimeout(hidetimer)
-            var bgimage = swipedir + 'arrow.png' // naming convention is "leftarrow.png", "rightarrow.png" etc
-            inner.style.background = 'transparent url(' + bgimage + ') center center no-repeat'
-            hidetimer = setTimeout(function(){ // reset background image after 1 second
-                inner.style.background = ''
-            }, 1000)
-        }
-    })
-}, false)
+
+var touchMove = function(e) {
+  e.preventDefault();
+  var touch - e.touches[0];
+  alert(touch.pageX)
+}
+
+
+$(".dng").on("touch", touchMove, false)
+
+
 
