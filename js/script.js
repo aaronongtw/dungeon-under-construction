@@ -643,7 +643,7 @@ $(document).ready(function() {
   $(document).keypress(movementIdentity)
   $("#help").hover(help)
 
-})
+
 
 // document.addEventListener('touchmove', function(e) {
 //     e.preventDefault();
@@ -656,22 +656,22 @@ var touchMove = function(e) {
     e.preventDefault();
     var touchL = e.touches[0];
     touch = parseInt(touchL.pageX);
-    alert(touch)
+    
     if (touch < 350) {
       dungeon.playerMoveLeft();
-      alert("moving left")
     } else if (touch > 650) {
       dungeon.playerMoveRight();
-      alert("moving right")
     } else {
       if (playerLoc === floor2downStairs || playerLoc === floor3downStairs) {
         dungeon.playerMoveDown();
       } else if (playerLoc === floor1Stairs || playerLoc === floor2upStairs) {
         dungeon.playerMoveUp();
       }
-      alert("ladder activation")
     }
     }
 
 
     document.addEventListener('touchmove', touchMove, false)
+
+
+})
