@@ -664,7 +664,7 @@ var touchMove = function(e) {
 }
 
 
-$(".dng").on("touch", touchMove, false)
+$(".dng").addEventListener('touchmove', touchMove, false)
 
 
 
