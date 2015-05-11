@@ -656,6 +656,7 @@ var touchMove = function(e) {
     e.preventDefault();
     var touchL = e.touches[0];
     touch = parseInt(touchL.pageX);
+    alert(touch)
     if (touch < 350) {
       dungeon.playerMoveLeft();
       alert("moving left")
