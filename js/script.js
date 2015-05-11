@@ -659,7 +659,7 @@ $("#help").hover(help)
 
 var touchMove = function(e) {
   e.preventDefault();
-  var touch - e.touches[0];
+  var touch = e.touches[0];
   alert(touch.pageX)
 }
 
