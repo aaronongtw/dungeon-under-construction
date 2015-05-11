@@ -641,8 +641,8 @@ var gameGraphics = {
 
 
 
-$(window).on("swiperight", dungeon.playerMoveRight)
-$(window).on("swipeleft", dungeon.playerMoveLeft)
+$(".container").on("swiperight", dungeon.playerMoveRight)
+$(".container").on("swipeleft", dungeon.playerMoveLeft)
 $('#start').on("click", startGame)
 $(document).keypress(movementIdentity)
 $("#help").hover(help)
