@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 var playerLoc;
 var difficulty;
 var repearLocation;
@@ -641,8 +643,17 @@ var gameGraphics = {
 
 
 
-$(".container").on("swiperight", dungeon.playerMoveRight)
-$(".container").on("swipeleft", dungeon.playerMoveLeft)
+
 $('#start').on("click", startGame)
 $(document).keypress(movementIdentity)
 $("#help").hover(help)
+
+
+
+document.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+    var touch = e.touches[0];
+    alert(touch.pageX + " - " + touch.pageY);
+}, false);
+
+})
