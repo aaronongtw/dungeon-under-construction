@@ -656,10 +656,10 @@ var touchMove = function(e) {
     e.preventDefault();
     var touchL = e.touches[0];
     touch = parseInt(touchL.pageX);
-    if (touch.pageX < 350) {
+    if (touch < 350) {
       dungeon.playerMoveLeft();
       alert("moving left")
-    } else if (touch.pageX > 650) {
+    } else if (touch > 650) {
       dungeon.playerMoveRight();
       alert("moving right")
     } else {
