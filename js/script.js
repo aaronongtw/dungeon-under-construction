@@ -651,10 +651,17 @@ $(document).ready(function() {
 //     alert(touch.pageX + " - " + touch.pageY);
 // }, false);
 
+document.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+    var touch = e.touches[0];
+    alert(touch.pageX + " - " + touch.pageY);
+}, false);
+
 
 var touchMove = function(e) {
     e.preventDefault();
     var touch = e.touches[0];
+    alert(touch.pageX)
     if (touch.pageX < 350) {
       dungeon.playerMoveLeft();
       alert("moving left")
