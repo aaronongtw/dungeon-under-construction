@@ -666,6 +666,7 @@ var touchMove = function(e) {
         dungeon.playerMoveUp();
       }
     }
+    }
 
 
     document.addEventListener('touchmove', touchMove, false)
